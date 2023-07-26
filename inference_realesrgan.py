@@ -9,7 +9,7 @@ from realesrgan import RealESRGANer
 from realesrgan.archs.srvgg_arch import SRVGGNetCompact
 
 
-def enhance_image(input_image: str = None, output_image: str = None):
+def enhance_image_func(input_image: str = None, output_image: str = None):
     """Inference demo for Real-ESRGAN."""
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -19,7 +19,8 @@ def enhance_image(input_image: str = None, output_image: str = None):
         "-n",
         "--model_name",
         type=str,
-        default="RealESRGAN_x4plus",
+        # default="RealESRGAN_x4plus",
+        default="RealESRGAN_x2plus",
         help=(
             "Model names: RealESRGAN_x4plus | RealESRNet_x4plus | RealESRGAN_x4plus_anime_6B | RealESRGAN_x2plus | "
             "realesr-animevideov3 | realesr-general-x4v3"
@@ -274,4 +275,4 @@ def enhance_image(input_image: str = None, output_image: str = None):
 
 
 if __name__ == "__main__":
-    enhance_image()
+    enhance_image_func()
