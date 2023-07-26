@@ -1,4 +1,5 @@
 # ignored folders
+gfpgan/
 datasets/*
 experiments/*
 results/*
